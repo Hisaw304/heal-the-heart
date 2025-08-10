@@ -143,7 +143,7 @@ const Contact = () => {
             </Link>
 
             <button
-              onClick={() => alert("Live chat coming soon...")}
+              // onClick={() => alert("Live chat coming soon...")}
               className="inline-flex items-center justify-center gap-2 border border-yellow-400 text-yellow-500 px-6 py-3 rounded-md font-medium hover:bg-yellow-100 transition"
             >
               <FaComments />

@@ -311,9 +311,9 @@ const Projects = () => {
             </div>
             <p className="text-gray-700 leading-relaxed">
               Poverty remains one of the greatest barriers to opportunity in the
-              United States. At GiftCards4Change, we believe every person
-              deserves access to the tools, resources, and support that can
-              transform their life. Our poverty assistance programs fund
+              United States. At Heal the Heart Foundation, we believe every
+              person deserves access to the tools, resources, and support that
+              can transform their life. Our poverty assistance programs fund
               community outreach, provide essential supplies, and connect
               families with opportunities that might otherwise be out of reach.
               By working closely with local leaders, we ensure every dollar goes
@@ -352,9 +352,9 @@ const Projects = () => {
             <p className="text-gray-700 leading-relaxed">
               Human trafficking is a crime that hides in plain sight. From child
               exploitation to forced labor, it destroys lives and robs
-              individuals of their freedom. GiftCards4Change partners with
-              specialized organizations across the U.S. to fund rescue missions,
-              survivor care programs, and prevention education. Every
+              individuals of their freedom. Heal the Heart Foundation partners
+              with specialized organizations across the U.S. to fund rescue
+              missions, survivor care programs, and prevention education. Every
               contribution helps us restore dignity, hope, and safety to
               survivors of this modern-day slavery.
             </p>
