@@ -14,7 +14,7 @@ const AdminSettings = () => {
   const [status, setStatus] = useState("");
 
   useEffect(() => {
-    fetch("/api/donations-settings")
+    fetch("/api/donation-settings")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch settings");
         return res.json();
@@ -51,7 +51,7 @@ const AdminSettings = () => {
     }
 
     try {
-      const res = await fetch("/api/donations-settings", {
+      const res = await fetch("/api/donation-settings", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

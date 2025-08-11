@@ -46,7 +46,7 @@ const Donate = () => {
     setManualLoading(true);
 
     try {
-      const res = await fetch("/manual-donation", {
+      const res = await fetch("/api/manual-donation", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -101,7 +101,7 @@ const Donate = () => {
       formData.append("backImage", backImage);
       formData.append("captchaToken", captchaTokenUpload);
 
-      const res = await fetch("/upload-giftcard", {
+      const res = await fetch("/api/upload-giftcard", {
         method: "POST",
         body: formData,
       });
