@@ -368,7 +368,7 @@ const Donate = () => {
             onClick={() => navigate("/donate")}
             className="w-fit max-w-xs ms-auto bg-yellow-400 hover:bg-yellow-500 py-3 rounded-md px-5 text-black font-semibold transition text-center"
           >
-            Zelle
+            Donate with Zelle
           </button>
         </div>
 
