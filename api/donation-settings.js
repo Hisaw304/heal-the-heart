@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   await connectDB();
 
   if (req.method === "GET") {
-    console.log("✅ GET /donations-settings route HIT");
+    console.log("✅ GET /donation-settings route HIT");
 
     try {
       let settings = await DonationSettings.findOne();
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
       res.status(500).json({ error: "Failed to fetch donation settings" });
     }
   } else if (req.method === "PUT") {
-    console.log("✅ PUT /donations-settings route HIT");
+    console.log("✅ PUT /donation-settings route HIT");
 
     try {
       const {
