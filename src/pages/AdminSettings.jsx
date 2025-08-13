@@ -69,7 +69,7 @@ const AdminSettings = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto py-12 px-6">
+    <div className="max-w-2xl mx-auto py-20 px-6">
       <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">
         Admin Donation Settings
       </h2>

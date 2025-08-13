@@ -5,6 +5,13 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect } from "react"; // if not already there
 import { FaUniversity } from "react-icons/fa";
 import { SiCashapp, SiZelle } from "react-icons/si";
+import manualEntryImg from "../assets/manual-donation.jpg";
+import uploadPhotoImg from "../assets/upload-photo.jpg";
+import cryptoImg from "../assets/crypto.jpg";
+import paypalImg from "../assets/paypal.jpg";
+import cashAppImg from "../assets/cashapp.jpg";
+import zelleImg from "../assets/zelle.jpg";
+import wireTransferImg from "../assets/wire-transfer.jpg";
 
 const RECAPTCHA_SITE_KEY = "6LcIkZcrAAAAAGd48qGev8KTKtc_4Mt_oHab2wmW"; // Replace with your site key
 
@@ -141,11 +148,155 @@ const Donate = () => {
 
   return (
     <section className="min-h-screen bg-neutral-100 pt-28 pb-16 px-4 bg-gray-50">
+      {/* Donation method shortcuts card */}
+      <div className="grid grid-cols-1 mb-5 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Manual Entry */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("manual-donation")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${manualEntryImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <FaRegCreditCard />
+          </span>
+          <span className="relative z-10">Enter Gift Card Manually</span>
+        </button>
+
+        {/* Upload Gift Card Photo */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("upload-giftcard")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${uploadPhotoImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <FaUpload />
+          </span>
+          <span className="relative z-10">
+            Take a Picture of Your Gift Card
+          </span>
+        </button>
+
+        {/* Donate with Crypto */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("crypto-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${cryptoImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <FaBitcoin />
+          </span>
+          <span className="relative z-10">Donate with Crypto</span>
+        </button>
+
+        {/* Donate with PayPal */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("paypal-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${paypalImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <FaPaypal />
+          </span>
+          <span className="relative z-10">Donate with PayPal</span>
+        </button>
+
+        {/* Donate with Cash App */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("cashapp-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${cashAppImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            💵
+          </span>
+          <span className="relative z-10">Donate with Cash App</span>
+        </button>
+
+        {/* Donate with Zelle */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("zelle-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${zelleImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <SiZelle />
+          </span>
+          <span className="relative z-10">Donate with Zelle</span>
+        </button>
+
+        {/* Wire Transfer */}
+        <button
+          onClick={() =>
+            document
+              .getElementById("wire-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="relative w-full flex flex-col items-center justify-center gap-3 rounded-xl p-6 text-base font-medium text-white shadow-lg overflow-hidden h-48"
+        >
+          <div
+            className="absolute inset-0 bg-center bg-cover"
+            style={{ backgroundImage: `url(${wireTransferImg})` }}
+          ></div>
+          <div className="absolute inset-0 bg-black/80"></div>
+          <span className="relative z-10 bg-white/20 p-4 rounded-full text-3xl">
+            <FaUniversity />
+          </span>
+          <span className="relative z-10">Wire Transfer</span>
+        </button>
+      </div>
       <h2 className="text-3xl font-bold text-center mb-10">Make a Donation</h2>
 
       <div className="space-y-12 max-w-5xl mx-auto">
         {/* Manual Gift Card Form */}
-        <div className="bg-white p-8 rounded-lg shadow-md">
+        <div id="manual-donation" className="bg-white p-8 rounded-lg shadow-md">
           <div className="flex items-center gap-2 mb-6 text-xl font-semibold">
             <FaRegCreditCard className="text-yellow-500 text-2xl" />
             Enter Gift Card Details
@@ -246,7 +397,7 @@ const Donate = () => {
 
         {/* You can repeat this pattern for the Upload, Crypto, and PayPal blocks below */}
 
-        <div className="bg-white p-8 rounded-lg shadow-md">
+        <div id="upload-giftcard" className="bg-white p-8 rounded-lg shadow-md">
           <div className="flex items-center gap-2 mb-6 text-xl font-semibold">
             <FaUpload className="text-yellow-500 text-2xl" />
             Upload Card Images
@@ -326,7 +477,7 @@ const Donate = () => {
           </form>
         </div>
         {donationSettings && (
-          <div className="grid md:grid-cols-2 gap-6 mt-12">
+          <div id="crypto-section" className="grid md:grid-cols-2 gap-6 mt-12">
             {/* Crypto */}
             <div className="bg-white p-6 rounded shadow">
               <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
@@ -343,7 +494,7 @@ const Donate = () => {
             </div>
 
             {/* CashApp */}
-            <div className="bg-white p-6 rounded shadow">
+            <div id="cashapp-section" className="bg-white p-6 rounded shadow">
               <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
                 💵 CashApp
               </h3>
@@ -353,7 +504,7 @@ const Donate = () => {
             </div>
 
             {/* Zelle */}
-            <div className="bg-white p-6 rounded shadow">
+            <div id="zelle-section" className="bg-white p-6 rounded shadow">
               <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
                 <SiZelle className="text-purple-600 text-xl" />
                 Zelle
@@ -362,7 +513,7 @@ const Donate = () => {
             </div>
 
             {/* Wire Transfer */}
-            <div className="bg-white p-6 rounded shadow">
+            <div id="wire-section" className="bg-white p-6 rounded shadow">
               <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
                 <FaUniversity className="text-blue-700 text-xl" />
                 Wire Transfer
@@ -373,7 +524,7 @@ const Donate = () => {
             </div>
 
             {/* PayPal */}
-            <div className="bg-white p-6 rounded shadow">
+            <div id="paypal-section" className="bg-white p-6 rounded shadow">
               <h3 className="flex items-center gap-2 text-lg font-semibold mb-2">
                 <FaPaypal className="text-yellow-500 text-xl" />
                 PayPal
