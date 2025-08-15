@@ -38,7 +38,7 @@ const faqs = [
 
 const Faq = () => {
   return (
-    <main className="pt-24 bg-gray-50 min-h-screen">
+    <main className="pt-20 bg-gray-50 min-h-screen">
       {/* Header */}
       <section className="text-center px-6 py-12 bg-gradient-to-r from-yellow-300 to-yellow-500 text-gray-900 shadow-lg">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-4">

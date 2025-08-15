@@ -5,7 +5,7 @@ import { FaBitcoin, FaEthereum, FaLock, FaRegHandshake } from "react-icons/fa";
 
 const Crypto = () => {
   return (
-    <main className="pt-28 bg-gray-50 text-gray-800">
+    <main className="pt-20 bg-gray-50 text-gray-800">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-6 py-20">
         <div className="max-w-5xl mx-auto text-center">
